@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			span{display: block;}
+		div{
+				width: 100px;height: 100px;
+				text-align: center;
+				line-height:100px ;
+			}
+		#box1{
+			background: yellow;
+		}
+		#box2{
+			background: gray;
+		}
+		#box3{
+			background: green;
+		}
+		</style>
+	</head>
+	<body>
+		<span>0:0:<a>20</a></span>
+		<div id="box1">暂停</div>
+		<div id="box2">继续</div>
+		<div id="box3">结束</div>
+		<script type="text/javascript">
+			var a=document.getElementsByTagName('a')[0]
+			var num=20;
+		    var timer = setInterval(function(){
+				if (num==0) {
+				 clearInterval(timer)   
+			}
+				a.innerHTML=num--;
+			},1000)
+			box1.onclick=function(){
+				clearInterval(timer)
+			}
+			box2.onclick=function(){
+				var timer = setInterval(function(){
+				if (num>0) {
+//				 clearInterval(timer)   
+               num--
+			}
+              a.innerHTML=num;
+			},1000)
+			}
+			box3.onclick=function(){
+				clearInterval(timer)
+				a.innerHTML=0
+			}
+			
+		</script>
+	</body>
+</html>
